@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Match Game - সুন্দর রঙ মেলানোর গেম</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎨 Color Match Game</h1>
+            <div class="score-board">
+                <div class="score">Score: <span id="score">0</span></div>
+                <div class="best">Best: <span id="best">0</span></div>
+                <div class="combo">Combo: <span id="combo">0</span></div>
+            </div>
+        </div>
+
+        <div class="game-info">
+            <div class="target-section">
+                <p>Match এই রঙটি:</p>
+                <div id="targetColor" class="target-box"></div>
+            </div>
+        </div>
+
+        <div class="game-board" id="gameBoard">
+            <!-- গেম বক্সগুলো এখানে জেনারেট হবে -->
+        </div>
+
+        <div class="game-stats">
+            <p>Time Left: <span id="timeLeft">60</span>s</p>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+
+        <div class="button-section">
+            <button id="startBtn" class="btn btn-start" onclick="startGame()">খেলা শুরু করুন</button>
+            <button id="restartBtn" class="btn btn-restart" onclick="restartGame()" style="display:none;">আবার খেলুন</button>
+        </div>
+
+        <div class="game-over" id="gameOver" style="display:none;">
+            <div class="game-over-content">
+                <h2>🎮 গেম শেষ!</h2>
+                <p class="final-score">আপনার স্কোর: <span id="finalScore">0</span></p>
+                <p class="best-score">সেরা স্কোর: <span id="bestScore">0</span></p>
+                <button class="btn btn-restart" onclick="restartGame()">আবার খেলুন</button>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h3>খেলার নিয়ম:</h3>
+            <ul>
+                <li>উপরে দেখানো রঙের সাথে মিল আছে এমন বক্স ক্লিক করুন</li>
+                <li>প্রতিটি সঠিক ম্যাচে 10 পয়েন্ট পান</li>
+                <li>Combo বাড়ান এবং বোনাস পয়েন্ট জিতুন</li>
+                <li>60 সেকেন্ড শেষ হওয়ার আগে যতটা সম্ভব স্কোর করুন!</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
